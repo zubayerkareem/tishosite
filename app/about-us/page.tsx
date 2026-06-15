@@ -248,7 +248,7 @@ export default function AboutPage() {
             Ready to talk investment goals?
           </p>
           <Button variant="accent" size="lg" asChild>
-            <Link href="/contact-us">Talk to investor relations â†’</Link>
+            <Link href="https://dashboard.tishoenterprises.com/">Talk to investor relations →</Link>
           </Button>
         </div>
       </section>

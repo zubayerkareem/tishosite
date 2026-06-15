@@ -149,7 +149,7 @@ export function DashboardSection() {
             </motion.p>
             <motion.div variants={fadeUp} className="mt-8">
               <Button variant="accent" asChild>
-                <Link href="/contact-us">{DASHBOARD.cta}</Link>
+                <Link href="https://dashboard.tishoenterprises.com/">{DASHBOARD.cta}</Link>
               </Button>
             </motion.div>
           </motion.div>

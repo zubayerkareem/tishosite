@@ -81,7 +81,7 @@ export function Policies() {
                   className="w-full"
                   asChild
                 >
-                  <Link href="/contact-us">{policy.cta}</Link>
+                  <Link href="https://dashboard.tishoenterprises.com/">{policy.cta}</Link>
                 </Button>
               </motion.div>
             ))}

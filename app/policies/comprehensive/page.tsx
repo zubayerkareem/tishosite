@@ -93,7 +93,7 @@ function Hero() {
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-16">
             <Button variant="accent" size="lg" asChild>
-              <Link href="/contact-us">{COMPREHENSIVE_POLICY.primaryCta}</Link>
+              <Link href="https://dashboard.tishoenterprises.com/">{COMPREHENSIVE_POLICY.primaryCta}</Link>
             </Button>
             <Button variant="ghost" size="lg" asChild>
               <Link href="/policies/compact">{COMPREHENSIVE_POLICY.secondaryCta}</Link>
@@ -641,7 +641,7 @@ function DashboardFeatures() {
             </motion.ul>
             <motion.div variants={fadeUp} className="mt-8">
               <Button variant="ghost" asChild>
-                <Link href="/contact-us" className="flex items-center gap-2">
+                <Link href="https://dashboard.tishoenterprises.com/" className="flex items-center gap-2">
                   <LayoutDashboard size={15} />
                   Access your dashboard after onboarding
                 </Link>
@@ -717,7 +717,7 @@ function PolicyCTA() {
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="accent" size="lg" asChild>
-              <Link href="/contact-us">
+              <Link href="https://dashboard.tishoenterprises.com/">
                 <ShieldCheck size={16} />
                 {COMPREHENSIVE_POLICY.primaryCta}
               </Link>

@@ -245,7 +245,7 @@ export default function PoliciesPage() {
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="accent" size="lg" asChild>
-                <Link href="/contact-us">Get in Touch</Link>
+                <Link href="https://dashboard.tishoenterprises.com/">Get in Touch</Link>
               </Button>
               <Button variant="ghost" size="lg" asChild>
                 <Link href="/">Back to Home</Link>

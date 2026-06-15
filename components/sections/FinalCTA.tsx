@@ -50,10 +50,10 @@ export function FinalCTA() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="accent" size="lg" asChild>
-              <Link href="/contact-us">{FINAL_CTA.primaryCta}</Link>
+              <Link href="https://dashboard.tishoenterprises.com/">{FINAL_CTA.primaryCta}</Link>
             </Button>
             <Button variant="ghost" size="lg" asChild>
-              <Link href="/contact-us">{FINAL_CTA.secondaryCta}</Link>
+              <Link href="https://dashboard.tishoenterprises.com/">{FINAL_CTA.secondaryCta}</Link>
             </Button>
           </motion.div>
         </motion.div>

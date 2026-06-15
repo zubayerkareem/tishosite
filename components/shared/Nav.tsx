@@ -58,7 +58,7 @@ export function Nav() {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-3">
               <Button variant="accent" size="sm" asChild>
-                <Link href="/contact-us">Get Started →</Link>
+                <Link href="https://dashboard.tishoenterprises.com/">Get Started →</Link>
               </Button>
             </div>
 
@@ -97,7 +97,7 @@ export function Nav() {
               ))}
               <div className="pt-2">
                 <Button variant="accent" className="w-full" asChild>
-                  <Link href="/contact-us" onClick={() => setMobileOpen(false)}>
+                  <Link href="https://dashboard.tishoenterprises.com/" onClick={() => setMobileOpen(false)}>
                     Get Started →
                   </Link>
                 </Button>
