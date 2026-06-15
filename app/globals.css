@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #002C14;
+  --color-background-elevated: #003D1C;
+  --color-background-subtle: #00351A;
+  --color-accent: #C3F63C;
+  --color-accent-hover: #D4FF52;
+  --color-foreground: #F5F7F2;
+  --color-foreground-muted: #A8B5A8;
+  --color-foreground-subtle: #6B7B6B;
+  --color-border: #1A3D2A;
+  --color-border-strong: #2A5238;
+
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :root {
+    --background: 160 100% 9%;
+    --foreground: 100 20% 96%;
+    --card: 150 100% 12%;
+    --card-foreground: 100 20% 96%;
+    --popover: 150 100% 12%;
+    --popover-foreground: 100 20% 96%;
+    --primary: 76 92% 60%;
+    --primary-foreground: 160 100% 9%;
+    --secondary: 150 50% 18%;
+    --secondary-foreground: 100 20% 96%;
+    --muted: 150 50% 16%;
+    --muted-foreground: 120 15% 68%;
+    --accent: 76 92% 60%;
+    --accent-foreground: 160 100% 9%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 40% 17%;
+    --input: 150 40% 17%;
+    --ring: 76 92% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer utilities {
+  .accent-glow {
+    box-shadow: 0 0 60px rgba(195, 246, 60, 0.15);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
