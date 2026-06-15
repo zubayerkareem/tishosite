@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Eye, Layers, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,30 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ABOUT } from "@/lib/copy";
 
 const iconMap = { Eye, Layers, ShieldCheck };
+
+const team = [
+  {
+    name: "Tonny Rutakirwa",
+    role: "Founder",
+    bio: "Serial entrepreneur and visionary behind Tisho Enterprise. Drives the company's strategic direction and long-term growth across markets.",
+    image: "/team/tonny.jpg",
+    linkedin: "https://www.linkedin.com/in/tonnyrutakirwa",
+  },
+  {
+    name: "Sharon Rutakirwa",
+    role: "Chief Executive Officer",
+    bio: "Leads day-to-day operations and investor relations. Ensures every investor experience reflects Tisho's commitment to transparency and reliability.",
+    image: "/team/sharon.jpg",
+    linkedin: "https://www.linkedin.com/in/shallon-agaba",
+  },
+  {
+    name: "Ignatius Mutungi",
+    role: "Chief Development Officer",
+    bio: "Oversees platform development and product strategy. Responsible for building the infrastructure that powers our investor dashboard and policy systems.",
+    image: "/team/ignatius.jpg",
+    linkedin: "https://www.linkedin.com/in/ignatius-mutungi-639269149",
+  },
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -180,24 +205,48 @@ export default function AboutPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
-              {ABOUT.team.map((member, i) => (
+              {team.map((member, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  className="bg-background-elevated border border-border rounded-2xl p-6 md:p-8 text-center hover:border-border-strong transition-colors"
+                  className="bg-background-elevated border border-border rounded-2xl overflow-hidden hover:border-border-strong transition-colors group"
                 >
-                  <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/20 mx-auto mb-5 flex items-center justify-center">
-                    <span className="text-xl font-medium text-accent">
-                      {member.name.charAt(0)}
-                    </span>
+                  {/* Photo */}
+                  <div className="relative w-full aspect-[4/4.5] overflow-hidden bg-background-subtle">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
-                  <h3 className="text-base font-medium text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs text-accent mb-3">{member.role}</p>
-                  <p className="text-xs text-foreground-muted leading-relaxed">
-                    {member.bio}
-                  </p>
+
+                  {/* Info */}
+                  <div className="p-5">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h3 className="text-base font-medium text-foreground mb-0.5">
+                          {member.name}
+                        </h3>
+                        <p className="text-xs text-accent">{member.role}</p>
+                      </div>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name} on LinkedIn`}
+                        className="mt-0.5 text-foreground-subtle hover:text-accent transition-colors shrink-0"
+                      >
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p className="text-xs text-foreground-muted leading-relaxed mt-3">
+                      {member.bio}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
