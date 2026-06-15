@@ -6,6 +6,7 @@ import { TierTable } from "@/components/sections/TierTable";
 import { Features } from "@/components/sections/Features";
 import { Benefits } from "@/components/sections/Benefits";
 import { DashboardSection } from "@/components/sections/Dashboard";
+import { DashboardShowcase } from "@/components/sections/DashboardShowcase";
 import { Risk } from "@/components/sections/Risk";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Features />
       <Benefits />
       <DashboardSection />
+      <DashboardShowcase />
       <Risk />
       <Testimonials />
       <FAQ />
