@@ -15,6 +15,14 @@ export async function uploadBlogImage(
   const buffer = Buffer.from(arrayBuffer);
 
   const client = getAdminClient();
+
+  // Create bucket if it doesn't exist yet
+  const { data: buckets } = await client.storage.listBuckets();
+  const exists = buckets?.some((b) => b.name === "blog-images");
+  if (!exists) {
+    await client.storage.createBucket("blog-images", { public: true });
+  }
+
   const { error } = await client.storage
     .from("blog-images")
     .upload(fileName, buffer, { contentType: file.type, upsert: false });
