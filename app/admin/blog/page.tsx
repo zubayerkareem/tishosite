@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getAllPostsAdmin } from "@/lib/blog";
-import { adminLogout } from "@/app/actions/auth";
 import { togglePublish } from "@/app/actions/blog";
 import { DeleteButton } from "./DeleteButton";
 
@@ -24,7 +23,8 @@ export default async function AdminBlogPage() {
           >
             + New post
           </Link>
-          <form action={adminLogout}>
+          <form method="POST" action="/api/admin/auth">
+            <input type="hidden" name="_action" value="logout" />
             <button
               type="submit"
               className="text-sm text-foreground-muted hover:text-foreground transition-colors px-3 py-2"

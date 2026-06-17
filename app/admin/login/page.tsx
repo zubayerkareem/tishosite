@@ -1,5 +1,3 @@
-import { adminLogin } from "@/app/actions/auth";
-
 export default async function AdminLoginPage({
   searchParams,
 }: {
@@ -20,7 +18,8 @@ export default async function AdminLoginPage({
         </div>
 
         <form
-          action={adminLogin}
+          method="POST"
+          action="/api/admin/auth"
           className="bg-background-elevated border border-border rounded-2xl p-6 space-y-4"
         >
           {error && (
