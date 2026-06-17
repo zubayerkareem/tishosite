@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CalendarDays, Clock, User, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -11,49 +12,6 @@ function formatDate(dateStr: string) {
     month: "long",
     year: "numeric",
   });
-}
-
-function renderContent(content: string) {
-  return content
-    .split(/\n\n+/)
-    .filter(Boolean)
-    .map((block, i) => {
-      if (block.startsWith("## ")) {
-        return (
-          <h2
-            key={i}
-            className="text-2xl font-medium text-foreground tracking-tight mt-10 mb-4"
-          >
-            {block.slice(3)}
-          </h2>
-        );
-      }
-      if (block.startsWith("### ")) {
-        return (
-          <h3
-            key={i}
-            className="text-xl font-medium text-foreground tracking-tight mt-8 mb-3"
-          >
-            {block.slice(4)}
-          </h3>
-        );
-      }
-      if (block.startsWith("- ") || block.startsWith("* ")) {
-        const items = block.split("\n").filter(Boolean);
-        return (
-          <ul key={i} className="list-disc list-inside space-y-1.5 text-foreground-muted text-base leading-relaxed my-4">
-            {items.map((item, j) => (
-              <li key={j}>{item.replace(/^[-*]\s/, "")}</li>
-            ))}
-          </ul>
-        );
-      }
-      return (
-        <p key={i} className="text-base text-foreground-muted leading-relaxed my-4">
-          {block}
-        </p>
-      );
-    });
 }
 
 export async function generateStaticParams() {
@@ -97,7 +55,6 @@ export default async function BlogPostPage({
           All posts
         </Link>
 
-        {/* Meta */}
         <Badge variant="muted" className="mb-5">
           {post.category ?? "Blog"}
         </Badge>
@@ -129,12 +86,28 @@ export default async function BlogPostPage({
           )}
         </div>
 
-        {/* Content */}
-        <div className="prose-container">
-          {post.content ? renderContent(post.content) : (
-            <p className="text-foreground-muted">Content coming soon.</p>
-          )}
-        </div>
+        {/* Featured image */}
+        {post.image_url && (
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden mb-10 border border-border">
+            <Image
+              src={post.image_url}
+              alt={post.title}
+              fill
+              className="object-cover"
+              unoptimized
+            />
+          </div>
+        )}
+
+        {/* HTML content from Tiptap */}
+        {post.content ? (
+          <div
+            className="blog-content"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+        ) : (
+          <p className="text-foreground-muted">Content coming soon.</p>
+        )}
       </div>
     </article>
   );
