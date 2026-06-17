@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { USPSection } from "@/components/sections/USP";
 import { Policies } from "@/components/sections/Policies";
@@ -13,7 +13,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Tisho Enterprise — Structured Investment Policies",
+  title: "Tishoenterprises — Structured Investment Policies",
   description:
     "Grow your capital with structured policies you can actually track. Two clearly defined investment policies. Stripe-secured payments. A live investor dashboard.",
 };

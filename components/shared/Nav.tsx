@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -34,7 +34,7 @@ export function Nav() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/TISHO ENTERPRISES LOGO/svg side white.svg"
-                alt="Tisho Enterprise"
+                alt="Tishoenterprises"
                 width={120}
                 height={32}
                 priority

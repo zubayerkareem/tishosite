@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/shared/Nav";
@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tisho Enterprise — Structured Investment Policies",
-    template: "%s | Tisho Enterprise",
+    default: "Tishoenterprises — Structured Investment Policies",
+    template: "%s | Tishoenterprises",
   },
   description:
     "Two clearly defined investment policies. Stripe-secured payments. A live investor dashboard showing exactly where your money stands.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://tishoenterprises.com",
-    siteName: "Tisho Enterprise",
+    siteName: "Tishoenterprises",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
