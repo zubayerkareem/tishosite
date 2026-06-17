@@ -57,7 +57,7 @@ export function TierTable() {
                       Tier
                     </th>
                     <th className="px-6 py-4 text-left text-xs uppercase tracking-[0.15em] text-foreground-subtle font-medium">
-                      Capital (USD/EUR)
+                      Capital (GBP / USD / EUR)
                     </th>
                     <th className="px-6 py-4 text-left text-xs uppercase tracking-[0.15em] text-foreground-subtle font-medium">
                       Compact (Target Annual)

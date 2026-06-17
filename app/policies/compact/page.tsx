@@ -481,7 +481,7 @@ function DashboardFeatures() {
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { label: "Next payout", value: "Jul 1", sub: "18 days away" },
-                  { label: "Accrued this period", value: "€116", sub: "of €140 expected" },
+                  { label: "Accrued this period", value: "£116", sub: "of £140 expected" },
                 ].map((s, i) => (
                   <div key={i} className="bg-background rounded-xl p-3">
                     <p className="text-xs text-foreground-subtle mb-1">{s.label}</p>
@@ -509,9 +509,9 @@ function DashboardFeatures() {
               <div>
                 <p className="text-xs text-foreground-subtle uppercase tracking-widest mb-3">Payout history</p>
                 {[
-                  { label: "May payout", amount: "+€140.00", date: "Jun 1" },
-                  { label: "Apr payout", amount: "+€140.00", date: "May 1" },
-                  { label: "Mar payout", amount: "+€140.00", date: "Apr 1" },
+                  { label: "May payout", amount: "+£140.00", date: "Jun 1" },
+                  { label: "Apr payout", amount: "+£140.00", date: "May 1" },
+                  { label: "Mar payout", amount: "+£140.00", date: "Apr 1" },
                 ].map((tx, i) => (
                   <div key={i} className="flex items-center justify-between py-2 border-b border-border last:border-0">
                     <div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Check, TrendingUp, ArrowUpRight, ArrowDownLeft } from "lucide-react";
@@ -37,7 +37,7 @@ function DashboardMockup() {
         {/* Stats row — 2 cols on mobile, 3 on sm+ */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {[
-            { label: "Accrued Return", value: "€1,240", sub: "+7% annually" },
+            { label: "Accrued Return", value: "£1,240", sub: "+7% annually" },
             { label: "Next Payout", value: "Jul 1", sub: "18 days" },
             { label: "Days to Maturity", value: "312", sub: "of 730 total" },
           ].map((stat, i) => (
@@ -82,8 +82,8 @@ function DashboardMockup() {
             Recent
           </p>
           {[
-            { label: "Q1 Payout", amount: "+€310.00", date: "Apr 1", incoming: true },
-            { label: "Initial Investment", amount: "−€20,000", date: "Jan 15", incoming: false },
+            { label: "Q1 Payout", amount: "+£310.00", date: "Apr 1", incoming: true },
+            { label: "Initial Investment", amount: "−£20,000", date: "Jan 15", incoming: false },
           ].map((tx, i) => (
             <div
               key={i}

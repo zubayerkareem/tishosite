@@ -540,13 +540,13 @@ function DashboardFeatures() {
               {/* Projected payout */}
               <div className="bg-background rounded-xl p-4 border border-accent/20">
                 <p className="text-xs text-foreground-subtle mb-1">Projected maturity payout</p>
-                <p className="text-3xl font-medium text-foreground">€24,800</p>
-                <p className="text-xs text-accent mt-1">€20,000 principal + €4,800 accrued returns</p>
+                <p className="text-3xl font-medium text-foreground">£24,800</p>
+                <p className="text-xs text-accent mt-1">£20,000 principal + £4,800 accrued returns</p>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: "Accrued to date", value: "€2,400", sub: "Month 12 of 24" },
+                  { label: "Accrued to date", value: "£2,400", sub: "Month 12 of 24" },
                   { label: "Days to maturity", value: "364", sub: "Exact: Jun 14 2026" },
                 ].map((s, i) => (
                   <div key={i} className="bg-background rounded-xl p-3">

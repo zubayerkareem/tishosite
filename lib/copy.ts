@@ -1,4 +1,4 @@
-export const NAV_LINKS = [
+﻿export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Policies", href: "/policies" },
@@ -95,7 +95,7 @@ export const POLICIES = {
 
 export const TIERS = {
   eyebrow: "Investment Tiers",
-  heading: "Flexible Entry, From €5,000 to €5M+",
+  heading: "Flexible Entry, From £5,000 to £5M+",
   intro:
     "Both policies scale across five tiers. Returns shown are target annual rates calculated on initial capital across the 24-month term. Final terms — including expected payout schedule and early clearance windows — are confirmed in your investor agreement.",
   disclaimer:
@@ -103,31 +103,31 @@ export const TIERS = {
   rows: [
     {
       tier: "Tier 1",
-      capital: "Up to €5,000",
+      capital: "Up to £5,000",
       compact: 6,
       comprehensive: 10,
     },
     {
       tier: "Tier 2",
-      capital: "€5,001 – €50,000",
+      capital: "£5,001 – £50,000",
       compact: 7,
       comprehensive: 12,
     },
     {
       tier: "Tier 3",
-      capital: "€50,001 – €500,000",
+      capital: "£50,001 – £500,000",
       compact: 8,
       comprehensive: 15,
     },
     {
       tier: "Tier 4",
-      capital: "€500,001 – €5,000,000",
+      capital: "£500,001 – £5,000,000",
       compact: 9,
       comprehensive: 20,
     },
     {
       tier: "Tier 5",
-      capital: "€5,000,000+",
+      capital: "£5,000,000+",
       compact: 10,
       comprehensive: 25,
     },
@@ -190,7 +190,7 @@ export const FEATURES = {
       icon: "BarChart3",
       title: "Tiered Structure",
       description:
-        "€5,000 entry to €5M+, with terms scaled to commitment level.",
+        "£5,000 entry to £5M+, with terms scaled to commitment level.",
     },
   ],
 };
@@ -330,7 +330,7 @@ export const FAQ_ITEMS = [
   {
     question: "What is the minimum investment?",
     answer:
-      "Tier 1 starts at any amount up to €5,000. From there, tiers scale up to €5M+. Specific terms for each tier are confirmed in your investor agreement.",
+      "Tier 1 starts at any amount up to £5,000. From there, tiers scale up to £5M+. Specific terms for each tier are confirmed in your investor agreement.",
   },
   {
     question: "Can I withdraw my capital early?",
@@ -508,11 +508,11 @@ export const CONTACT = {
     hours: "Monday – Friday, 9am – 6pm GMT",
   },
   investmentRanges: [
-    { label: "Up to €5,000 (Tier 1)", value: "tier-1" },
-    { label: "€5,001 – €50,000 (Tier 2)", value: "tier-2" },
-    { label: "€50,001 – €500,000 (Tier 3)", value: "tier-3" },
-    { label: "€500,001 – €5,000,000 (Tier 4)", value: "tier-4" },
-    { label: "€5,000,000+ (Tier 5)", value: "tier-5" },
+    { label: "Up to £5,000 (Tier 1)", value: "tier-1" },
+    { label: "£5,001 – £50,000 (Tier 2)", value: "tier-2" },
+    { label: "£50,001 – £500,000 (Tier 3)", value: "tier-3" },
+    { label: "£500,001 – £5,000,000 (Tier 4)", value: "tier-4" },
+    { label: "£5,000,000+ (Tier 5)", value: "tier-5" },
     { label: "Still deciding", value: "undecided" },
   ],
   faq: [
@@ -621,7 +621,7 @@ export const COMPACT_POLICY = {
 
   stats: [
     { label: "Term length", value: "24", unit: "months" },
-    { label: "Entry from", value: "€5K", unit: "" },
+    { label: "Entry from", value: "£5K", unit: "" },
     { label: "Target return (Tier 2)", value: "7", unit: "% p.a." },
     { label: "Payout options", value: "4", unit: "cadences" },
   ],
@@ -696,11 +696,11 @@ export const COMPACT_POLICY = {
     description:
       "Returns are calculated annually on your initial capital across the 24-month term. The tier is determined by your opening investment amount and stays fixed for the life of the policy.",
     rows: [
-      { tier: "Tier 1", capital: "Up to €5,000", rate: 6, suitable: "Entry-level investors" },
-      { tier: "Tier 2", capital: "€5,001 – €50,000", rate: 7, suitable: "Individual investors" },
-      { tier: "Tier 3", capital: "€50,001 – €500,000", rate: 8, suitable: "Established portfolios" },
-      { tier: "Tier 4", capital: "€500,001 – €5,000,000", rate: 9, suitable: "High-net-worth individuals" },
-      { tier: "Tier 5", capital: "€5,000,000+", rate: 10, suitable: "Institutional & family office" },
+      { tier: "Tier 1", capital: "Up to £5,000", rate: 6, suitable: "Entry-level investors" },
+      { tier: "Tier 2", capital: "£5,001 – £50,000", rate: 7, suitable: "Individual investors" },
+      { tier: "Tier 3", capital: "£50,001 – £500,000", rate: 8, suitable: "Established portfolios" },
+      { tier: "Tier 4", capital: "£500,001 – £5,000,000", rate: 9, suitable: "High-net-worth individuals" },
+      { tier: "Tier 5", capital: "£5,000,000+", rate: 10, suitable: "Institutional & family office" },
     ],
   },
 
@@ -782,7 +782,7 @@ export const COMPREHENSIVE_POLICY = {
 
   stats: [
     { label: "Term length", value: "24", unit: "months" },
-    { label: "Entry from", value: "€5K", unit: "" },
+    { label: "Entry from", value: "£5K", unit: "" },
     { label: "Target return (Tier 2)", value: "12", unit: "% p.a." },
     { label: "Payout", value: "1×", unit: "at maturity" },
   ],
@@ -838,11 +838,11 @@ export const COMPREHENSIVE_POLICY = {
     description:
       "The Comprehensive Policy offers significantly higher target returns than the Compact Policy — reflecting the structure of holding returns until maturity. All rates are annual, calculated on initial capital across the 24-month term.",
     rows: [
-      { tier: "Tier 1", capital: "Up to €5,000", compact: 6, rate: 10, uplift: "+4%" },
-      { tier: "Tier 2", capital: "€5,001 – €50,000", compact: 7, rate: 12, uplift: "+5%" },
-      { tier: "Tier 3", capital: "€50,001 – €500,000", compact: 8, rate: 15, uplift: "+7%" },
-      { tier: "Tier 4", capital: "€500,001 – €5,000,000", compact: 9, rate: 20, uplift: "+11%" },
-      { tier: "Tier 5", capital: "€5,000,000+", compact: 10, rate: 25, uplift: "+15%" },
+      { tier: "Tier 1", capital: "Up to £5,000", compact: 6, rate: 10, uplift: "+4%" },
+      { tier: "Tier 2", capital: "£5,001 – £50,000", compact: 7, rate: 12, uplift: "+5%" },
+      { tier: "Tier 3", capital: "£50,001 – £500,000", compact: 8, rate: 15, uplift: "+7%" },
+      { tier: "Tier 4", capital: "£500,001 – £5,000,000", compact: 9, rate: 20, uplift: "+11%" },
+      { tier: "Tier 5", capital: "£5,000,000+", compact: 10, rate: 25, uplift: "+15%" },
     ],
   },
 
@@ -902,7 +902,7 @@ export const COMPREHENSIVE_POLICY = {
     {
       question: "What exactly is paid out at maturity?",
       answer:
-        "Your full opening principal plus all accrued returns across the 24-month term. For example, a Tier 2 investor placing €20,000 at 12% p.a. would receive €20,000 + (€20,000 × 12% × 2) = €24,800 at month 24, subject to the terms in their agreement.",
+        "Your full opening principal plus all accrued returns across the 24-month term. For example, a Tier 2 investor placing £20,000 at 12% p.a. would receive £20,000 + (£20,000 × 12% × 2) = £24,800 at month 24, subject to the terms in their agreement.",
     },
     {
       question: "Why is the Comprehensive return higher than the Compact?",
@@ -927,7 +927,7 @@ export const COMPREHENSIVE_POLICY = {
     {
       question: "Is there a minimum or maximum investment?",
       answer:
-        "Tier 1 starts at any amount up to €5,000. There is no enforced upper limit — Tier 5 accommodates investments of €5M+. Final terms for all tiers are confirmed in your investor agreement.",
+        "Tier 1 starts at any amount up to £5,000. There is no enforced upper limit — Tier 5 accommodates investments of £5M+. Final terms for all tiers are confirmed in your investor agreement.",
     },
   ],
 };
