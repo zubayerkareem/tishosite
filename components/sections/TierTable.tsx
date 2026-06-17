@@ -63,7 +63,7 @@ export function TierTable() {
                       Compact (Target Monthly)
                     </th>
                     <th className="px-6 py-4 text-left text-xs uppercase tracking-[0.15em] text-foreground-subtle font-medium">
-                      Comprehensive (Target Monthly)
+                      Comprehensive (Target Yearly)
                     </th>
                   </tr>
                 </thead>
