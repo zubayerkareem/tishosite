@@ -1,10 +1,12 @@
 import { adminLogin } from "@/app/actions/auth";
 
-export default function AdminLoginPage({
+export default async function AdminLoginPage({
   searchParams,
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
+  const { error } = await searchParams;
+
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
@@ -21,6 +23,12 @@ export default function AdminLoginPage({
           action={adminLogin}
           className="bg-background-elevated border border-border rounded-2xl p-6 space-y-4"
         >
+          {error && (
+            <p className="text-xs text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg px-3 py-2.5">
+              Incorrect password. Try again.
+            </p>
+          )}
+
           <div>
             <label
               htmlFor="password"
