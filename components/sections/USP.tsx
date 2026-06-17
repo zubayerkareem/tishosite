@@ -29,7 +29,7 @@ export function USPSection() {
               description={
                 <>
                   Most platforms ask you to wire money and wait. Tisho works the
-                  other way around â€” you choose the policy structure that fits your
+                  other way around &mdash; you choose the policy structure that fits your
                   goals, watch your investment perform in real time, and get paid on
                   a schedule you set.
                   <br />
