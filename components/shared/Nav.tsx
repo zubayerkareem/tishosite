@@ -34,7 +34,7 @@ export function Nav() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/TISHO ENTERPRISES LOGO/svg side white.svg"
-                alt="Tishoenterprises"
+                alt="Tisho Enterprises"
                 width={120}
                 height={32}
                 priority

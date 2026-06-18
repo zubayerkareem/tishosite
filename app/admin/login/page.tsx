@@ -9,7 +9,7 @@ export default function AdminLoginPage() {
             Admin
           </h1>
           <p className="text-sm text-foreground-muted mt-1">
-            Tishoenterprises blog management
+            Tisho Enterprises blog management
           </p>
         </div>
 

@@ -15,7 +15,7 @@ const team = [
   {
     name: "Tonny Rutakirwa",
     role: "Founder",
-    bio: "Serial entrepreneur and visionary behind Tishoenterprises. Drives the company's strategic direction and long-term growth across markets.",
+    bio: "Serial entrepreneur and visionary behind Tisho Enterprises. Drives the company's strategic direction and long-term growth across markets.",
     image: "/team/tonny.jpg",
     linkedin: "https://www.linkedin.com/in/tonnyrutakirwa",
   },
@@ -160,7 +160,7 @@ export default function AboutPage() {
             <motion.div variants={fadeUp} className="max-w-2xl mb-16">
               <SectionHeader
                 eyebrow="Our Journey"
-                title="The Journey of Tishoenterprises."
+                title="The Journey of Tisho Enterprises."
               />
             </motion.div>
 

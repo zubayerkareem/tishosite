@@ -28,7 +28,7 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Tishoenterprises`,
+    title: `${post.title} — Tisho Enterprises`,
     description: post.excerpt ?? undefined,
   };
 }

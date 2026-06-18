@@ -13,7 +13,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Tishoenterprises — Structured Investment Policies",
+  title: "Tisho Enterprises — Structured Investment Policies",
   description:
     "Grow your capital with structured policies you can actually track. Two clearly defined investment policies. Stripe-secured payments. A live investor dashboard.",
 };

@@ -303,7 +303,7 @@ export const TESTIMONIALS = {
 
 export const FAQ_ITEMS = [
   {
-    question: "Who is Tishoenterprises?",
+    question: "Who is Tisho Enterprises?",
     answer:
       "Tisho is a UK-registered investment platform offering structured policies for individual and institutional investors. We manage capital through two policy structures designed around different investor goals — regular payouts (Compact) or long-term capital growth (Comprehensive).",
   },
@@ -400,15 +400,15 @@ export const FOOTER = {
     cta: "Subscribe",
   },
   compliance:
-    "Tishoenterprises is a UK-registered company. The information on this site does not constitute financial advice or a personal recommendation. All investments carry risk and may lose value. Target returns are projected, not guaranteed. Past performance does not guarantee future results. Full terms and risk disclosures are provided in your investor agreement. If you are unsure whether this product is suitable for you, please consult an independent financial adviser.",
-  copyright: `© ${new Date().getFullYear()} Tishoenterprises Ltd. All rights reserved. Company No. 15682802.`,
+    "Tisho Enterprises is a UK-registered company. The information on this site does not constitute financial advice or a personal recommendation. All investments carry risk and may lose value. Target returns are projected, not guaranteed. Past performance does not guarantee future results. Full terms and risk disclosures are provided in your investor agreement. If you are unsure whether this product is suitable for you, please consult an independent financial adviser.",
+  copyright: `© ${new Date().getFullYear()} Tisho Enterprises Ltd. All rights reserved. Company No. 15682802.`,
 };
 
 export const ABOUT = {
   hero: {
     eyebrow: "About Tisho",
     heading: "Built for investors who want to see where their money is.",
-    body: "Tishoenterprises is a UK-registered investment platform built on the principle that investors deserve full visibility — not quarterly snapshots. We combine structured policy design with real-time tracking and Stripe-backed payments to create a platform where clarity is built in, not bolted on.",
+    body: "Tisho Enterprises is a UK-registered investment platform built on the principle that investors deserve full visibility — not quarterly snapshots. We combine structured policy design with real-time tracking and Stripe-backed payments to create a platform where clarity is built in, not bolted on.",
   },
   mission: {
     heading: "Our Mission",
@@ -468,7 +468,7 @@ export const ABOUT = {
     {
       name: "Tonny Rutakirwa",
       role: "Founder",
-      bio: "Visionary behind Tishoenterprises's structured investment approach.",
+      bio: "Visionary behind Tisho Enterprises's structured investment approach.",
     },
     {
       name: "Sharon Rutakirwa",
@@ -485,7 +485,7 @@ export const ABOUT = {
     eyebrow: "Compliance & Registration",
     heading: "Built on a Verifiable Foundation.",
     details: [
-      { label: "Company Name", value: "Tishoenterprises Ltd" },
+      { label: "Company Name", value: "Tisho Enterprises Ltd" },
       { label: "Company Number", value: "15682802" },
       { label: "Registered Address", value: "86-90 Paul Street, London, EC2A 4NE" },
       { label: "Payment Infrastructure", value: "Stripe (PCI-DSS Level 1 Certified)" },

@@ -72,7 +72,7 @@ export function Footer() {
             <Link href="/">
               <Image
                 src="/TISHO ENTERPRISES LOGO/svg side white.svg"
-                alt="Tishoenterprises"
+                alt="Tisho Enterprises"
                 width={110}
                 height={30}
                 className="h-7 w-auto"

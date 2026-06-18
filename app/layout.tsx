@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tishoenterprises — Structured Investment Policies",
-    template: "%s | Tishoenterprises",
+    default: "Tisho Enterprises — Structured Investment Policies",
+    template: "%s | Tisho Enterprises",
   },
   description:
     "Two clearly defined investment policies. Stripe-secured payments. A live investor dashboard showing exactly where your money stands.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://tishoenterprises.com",
-    siteName: "Tishoenterprises",
+    siteName: "Tisho Enterprises",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };

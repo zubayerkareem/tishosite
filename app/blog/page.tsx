@@ -24,7 +24,7 @@ export default async function BlogPage() {
             </h1>
             <p className="text-lg text-foreground-muted leading-relaxed">
               Policy deep dives, market context, and platform updates from the
-              Tishoenterprises team.
+              Tisho Enterprises team.
             </p>
           </div>
         </div>
