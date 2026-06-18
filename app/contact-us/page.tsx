@@ -1,7 +1,8 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import { submitContact } from "@/app/actions/contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,7 +52,7 @@ function ContactForm() {
     return e;
   };
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length > 0) {
@@ -59,6 +60,7 @@ function ContactForm() {
       return;
     }
     setErrors({});
+    await submitContact(form);
     setSubmitted(true);
   };
 
@@ -66,7 +68,7 @@ function ContactForm() {
     return (
       <div className="bg-background-elevated border border-accent/30 rounded-2xl p-10 text-center">
         <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-5">
-          <span className="text-accent text-2xl">âœ“</span>
+          <CheckCircle size={28} className="text-accent" />
         </div>
         <h3 className="text-xl font-medium text-foreground mb-2">Enquiry received.</h3>
         <p className="text-sm text-foreground-muted">

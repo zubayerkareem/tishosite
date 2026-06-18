@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { FOOTER } from "@/lib/copy";
+import { subscribeNewsletter } from "@/app/actions/newsletter";
 
 const socialLinks = [
   {
@@ -31,6 +32,7 @@ const socialLinks = [
 
 export function Footer() {
   const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
 
   return (
     <footer className="border-t border-border bg-background-subtle">
@@ -41,7 +43,13 @@ export function Footer() {
             {FOOTER.newsletter.heading}
           </p>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={async (e) => {
+              e.preventDefault();
+              if (!email) return;
+              await subscribeNewsletter(email);
+              setEmail("");
+              setSubscribed(true);
+            }}
             className="flex gap-2 sm:gap-3 w-full md:w-auto"
           >
             <Input
@@ -52,7 +60,7 @@ export function Footer() {
               className="flex-1 md:w-56 lg:w-64"
             />
             <Button variant="accent" type="submit" className="shrink-0">
-              {FOOTER.newsletter.cta}
+              {subscribed ? "Subscribed ✓" : FOOTER.newsletter.cta}
             </Button>
           </form>
         </div>
