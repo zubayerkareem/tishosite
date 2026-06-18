@@ -10,7 +10,7 @@ export function LoginForm() {
 
   useEffect(() => {
     if (state?.success) {
-      router.replace("/admin/blog");
+      router.replace("/admin");
     }
   }, [state, router]);
 

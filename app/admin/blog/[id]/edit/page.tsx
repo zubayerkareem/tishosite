@@ -15,9 +15,9 @@ export default async function EditPostPage({
   const update = updatePost.bind(null, id);
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-background-elevated px-6 py-4 flex items-center gap-4">
-        <Link href="/admin/blog" className="text-sm text-foreground-muted hover:text-foreground transition-colors">
+        <Link href="/admin" className="text-sm text-foreground-muted hover:text-foreground transition-colors">
           ← Back
         </Link>
         <h1 className="text-lg font-medium text-foreground">Edit Post</h1>
@@ -25,6 +25,6 @@ export default async function EditPostPage({
       <main className="max-w-3xl mx-auto px-6 py-8">
         <PostForm action={update} defaultValues={post} submitLabel="Save changes" />
       </main>
-    </>
+    </div>
   );
 }

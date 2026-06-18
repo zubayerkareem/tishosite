@@ -38,7 +38,7 @@ export async function createPost(formData: FormData) {
   }
 
   revalidatePath("/blog");
-  redirect("/admin/blog");
+  redirect("/admin");
 }
 
 export async function updatePost(id: string, formData: FormData) {
@@ -67,13 +67,13 @@ export async function updatePost(id: string, formData: FormData) {
   }
 
   revalidatePath("/blog");
-  redirect("/admin/blog");
+  redirect("/admin");
 }
 
 export async function deletePost(id: string) {
   await getAdminClient().from("blog_posts").delete().eq("id", id);
   revalidatePath("/blog");
-  redirect("/admin/blog");
+  redirect("/admin");
 }
 
 export async function togglePublish(id: string, published: boolean) {
