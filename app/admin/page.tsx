@@ -1,24 +1,39 @@
 export const dynamic = "force-dynamic";
 
-import { getAllPostsAdmin } from "@/lib/blog";
-import { getAllContacts } from "@/lib/contacts";
-import { getAllSubscribers } from "@/lib/newsletter";
-import { AdminPanel } from "./AdminPanel";
+import { getAllPostsAdmin, type Paginated, type BlogPost } from "@/lib/blog";
+import { getAllContacts, getUnreadContactCount, type ContactSubmission } from "@/lib/contacts";
+import { getAllSubscribers, type NewsletterSubscriber } from "@/lib/newsletter";
+import { AdminShell } from "./AdminShell";
 
-export default async function AdminPage() {
-  const [posts, contacts, subscribers] = await Promise.all([
-    getAllPostsAdmin(),
-    getAllContacts(),
-    getAllSubscribers(),
+type Tab = "blog" | "contacts" | "newsletter";
+
+const VALID_TABS: Tab[] = ["blog", "contacts", "newsletter"];
+
+export default async function AdminPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tab?: string; page?: string }>;
+}) {
+  const { tab: rawTab, page: rawPage } = await searchParams;
+  const tab: Tab = VALID_TABS.includes(rawTab as Tab) ? (rawTab as Tab) : "blog";
+  const page = Math.max(1, parseInt(rawPage ?? "1", 10) || 1);
+
+  const empty = <T,>(): Paginated<T> => ({ data: [], total: 0 });
+
+  const [posts, contacts, newsletter, unreadContacts] = await Promise.all([
+    tab === "blog" ? getAllPostsAdmin(page) : empty<BlogPost>(),
+    tab === "contacts" ? getAllContacts(page) : empty<ContactSubmission>(),
+    tab === "newsletter" ? getAllSubscribers(page) : empty<NewsletterSubscriber>(),
+    getUnreadContactCount(),
   ]);
 
-  const unreadContacts = contacts.filter((c) => !c.read).length;
-
   return (
-    <AdminPanel
+    <AdminShell
+      tab={tab}
+      page={page}
       posts={posts}
       contacts={contacts}
-      subscribers={subscribers}
+      newsletter={newsletter}
       unreadContacts={unreadContacts}
     />
   );

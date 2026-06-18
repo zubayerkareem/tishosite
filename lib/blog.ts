@@ -44,18 +44,29 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   return data;
 }
 
-// Admin: fetch all posts (published + drafts)
-export async function getAllPostsAdmin(): Promise<BlogPost[]> {
-  const { data, error } = await getAdminClient()
+export interface Paginated<T> {
+  data: T[];
+  total: number;
+}
+
+const PAGE_SIZE = 10;
+
+// Admin: fetch paginated posts (published + drafts)
+export async function getAllPostsAdmin(page = 1): Promise<Paginated<BlogPost>> {
+  const from = (page - 1) * PAGE_SIZE;
+  const to = from + PAGE_SIZE - 1;
+
+  const { data, error, count } = await getAdminClient()
     .from("blog_posts")
-    .select("*")
-    .order("created_at", { ascending: false });
+    .select("*", { count: "exact" })
+    .order("created_at", { ascending: false })
+    .range(from, to);
 
   if (error) {
     console.error("Error fetching admin posts:", error);
-    return [];
+    return { data: [], total: 0 };
   }
-  return data ?? [];
+  return { data: data ?? [], total: count ?? 0 };
 }
 
 // Admin: fetch single post by id
