@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { getAdminClient } from "@/lib/supabase";
 
 export async function subscribeNewsletter(email: string) {
@@ -7,4 +8,5 @@ export async function subscribeNewsletter(email: string) {
     .from("newsletter_subscribers")
     .upsert({ email, active: true }, { onConflict: "email" });
   if (error) console.error("Newsletter subscribe error:", error);
+  revalidatePath("/admin");
 }

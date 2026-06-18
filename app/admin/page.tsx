@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getAllPostsAdmin } from "@/lib/blog";
 import { getAllContacts } from "@/lib/contacts";
 import { getAllSubscribers } from "@/lib/newsletter";

@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { getAdminClient } from "@/lib/supabase";
 
 export async function submitContact(data: {
@@ -24,4 +25,5 @@ export async function markContactRead(id: string, read: boolean) {
     .from("contact_submissions")
     .update({ read: !read })
     .eq("id", id);
+  revalidatePath("/admin");
 }
