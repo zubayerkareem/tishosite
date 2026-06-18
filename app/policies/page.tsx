@@ -28,9 +28,9 @@ const policies = [
     title: "Compact Policy",
     tagline: "Predictable returns. Paid on your schedule.",
     description:
-      "Choose your payout cadence — monthly, quarterly, bi-annual, or annual. Returns are distributed on the schedule you select throughout the 24-month term. Best for investors who want structured cashflow from their capital.",
+      "Choose your payout cadence — monthly, quarterly, or bi-annual. Returns are distributed on the schedule you select throughout the 24-month term. Best for investors who want structured cashflow from their capital.",
     features: [
-      "4 payout cadences to choose from",
+      "3 payout cadences to choose from",
       "Returns distributed throughout the term",
       "6% – 10% target annual return (by tier)",
       "24-month fixed term",

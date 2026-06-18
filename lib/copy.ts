@@ -62,9 +62,9 @@ export const POLICIES = {
       title: "Compact Policy",
       subtitle: "Flexible, Regular Payouts",
       description:
-        "For investors who want returns flowing in on a predictable schedule. Choose monthly, quarterly, bi-annual, or annual payout cadence. Best for investors looking to supplement income or compound on a defined timeline.",
+        "For investors who want returns flowing in on a predictable schedule. Choose monthly, quarterly, or bi-annual payout cadence. Best for investors looking to supplement income or compound on a defined timeline.",
       features: [
-        "Monthly, quarterly, bi-annual, or annual payouts",
+        "Monthly, quarterly, or bi-annual payouts",
         "Returns calculated on initial capital",
         "24-month fixed term",
         "Optional early clearance via dashboard",
@@ -154,7 +154,7 @@ export const FEATURES = {
       icon: "Repeat",
       title: "Flexible Payout Schedules",
       description:
-        "Monthly, quarterly, bi-annual, or annual on the Compact Policy.",
+        "Monthly, quarterly, or bi-annual on the Compact Policy.",
     },
     {
       icon: "CalendarClock",
@@ -340,7 +340,7 @@ export const FAQ_ITEMS = [
   {
     question: "How often do I get paid?",
     answer:
-      "On the Compact Policy, you choose: monthly, quarterly, bi-annual, or annual. On the Comprehensive Policy, returns accrue across the 24-month term and are paid out at maturity along with your principal.",
+      "On the Compact Policy, you choose: monthly, quarterly, or bi-annual. On the Comprehensive Policy, returns accrue across the 24-month term and are paid out at maturity along with your principal.",
   },
   {
     question: "Are the returns shown guaranteed?",
@@ -623,7 +623,7 @@ export const COMPACT_POLICY = {
     { label: "Term length", value: "24", unit: "months" },
     { label: "Entry from", value: "£5K", unit: "" },
     { label: "Target return (Tier 2)", value: "7", unit: "% p.a." },
-    { label: "Payout options", value: "4", unit: "cadences" },
+    { label: "Payout options", value: "3", unit: "cadences" },
   ],
 
   howItWorks: {
@@ -640,7 +640,7 @@ export const COMPACT_POLICY = {
         number: "02",
         title: "Select your tier & cadence",
         description:
-          "Choose your investment amount (which determines your tier and target return rate) and pick your payout frequency — monthly, quarterly, bi-annual, or annual.",
+          "Choose your investment amount (which determines your tier and target return rate) and pick your payout frequency — monthly, quarterly, or bi-annual.",
       },
       {
         number: "03",
@@ -661,7 +661,7 @@ export const COMPACT_POLICY = {
     eyebrow: "Payout Cadences",
     heading: "Choose how often you get paid.",
     description:
-      "The Compact Policy gives you four cadence options. You lock in your choice when you sign your investor agreement — it holds for the full 24-month term.",
+      "The Compact Policy gives you three cadence options. You lock in your choice when you sign your investor agreement — it holds for the full 24-month term.",
     options: [
       {
         label: "Monthly",
@@ -679,12 +679,6 @@ export const COMPACT_POLICY = {
         label: "Bi-Annual",
         icon: "Calendar",
         description: "Two payments per year, six months apart. Works well for investors who prefer fewer, larger distributions.",
-        highlight: false,
-      },
-      {
-        label: "Annual",
-        icon: "CalendarCheck",
-        description: "One payment per year. Suitable for investors who want to track performance annually and don't need interim cashflow.",
         highlight: false,
       },
     ],
@@ -876,7 +870,7 @@ export const COMPREHENSIVE_POLICY = {
     heading: "Compact vs. Comprehensive — at a glance.",
     rows: [
       { label: "Term", compact: "24 months", comprehensive: "24 months" },
-      { label: "Payout structure", compact: "Periodic (4 cadences)", comprehensive: "Single at maturity" },
+      { label: "Payout structure", compact: "Periodic (3 cadences)", comprehensive: "Single at maturity" },
       { label: "Target return (Tier 2)", compact: "7% p.a.", comprehensive: "12% p.a." },
       { label: "Best for", compact: "Income & cashflow", comprehensive: "Capital growth" },
       { label: "Early clearance", compact: "Available", comprehensive: "Available (terms apply)" },
