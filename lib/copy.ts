@@ -622,7 +622,7 @@ export const COMPACT_POLICY = {
   stats: [
     { label: "Term length", value: "24", unit: "months" },
     { label: "Entry from", value: "£5K", unit: "" },
-    { label: "Target return (Tier 2)", value: "7", unit: "% p.a." },
+    { label: "Target return (Tier 2)", value: "7", unit: "% per month" },
     { label: "Payout options", value: "3", unit: "cadences" },
   ],
 
@@ -871,7 +871,7 @@ export const COMPREHENSIVE_POLICY = {
     rows: [
       { label: "Term", compact: "24 months", comprehensive: "24 months" },
       { label: "Payout structure", compact: "Periodic (3 cadences)", comprehensive: "Single at maturity" },
-      { label: "Target return (Tier 2)", compact: "7% p.a.", comprehensive: "12% p.a." },
+      { label: "Target return (Tier 2)", compact: "7% per month", comprehensive: "12% p.a." },
       { label: "Best for", compact: "Income & cashflow", comprehensive: "Capital growth" },
       { label: "Early clearance", compact: "Available", comprehensive: "Available (terms apply)" },
       { label: "Multi-policy", compact: "Yes", comprehensive: "Yes" },

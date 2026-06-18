@@ -36,7 +36,7 @@ const policies = [
       "24-month fixed term",
       "Early clearance available",
     ],
-    stat: { label: "Target return (Tier 2)", value: "7% p.a." },
+    stat: { label: "Target return (Tier 2)", value: "7% per month" },
     accent: false,
     cta: "Explore Compact Policy",
   },
@@ -65,7 +65,7 @@ const policies = [
 const comparison = [
   { label: "Term", compact: "24 months", comprehensive: "24 months" },
   { label: "Payout structure", compact: "Periodic (4 options)", comprehensive: "Single at maturity" },
-  { label: "Target return, Tier 2", compact: "7% p.a.", comprehensive: "12% p.a." },
+  { label: "Target return, Tier 2", compact: "7% per month", comprehensive: "12% p.a." },
   { label: "Target return, Tier 5", compact: "10% p.a.", comprehensive: "25% p.a." },
   { label: "Best for", compact: "Income & cashflow", comprehensive: "Capital growth" },
   { label: "Early clearance", compact: "✓ Available", comprehensive: "✓ Available" },

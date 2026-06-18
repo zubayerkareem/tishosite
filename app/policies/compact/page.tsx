@@ -299,7 +299,7 @@ function TierBreakdown() {
                         <span className="text-2xl font-medium text-accent">
                           <AnimatedNumber target={row.rate} inView={inView} />
                         </span>
-                        <span className="text-sm text-accent/70">% p.a.</span>
+                        <span className="text-sm text-accent/70">% per month</span>
                       </td>
                       <td className="px-4 sm:px-6 py-3 sm:py-4 text-sm text-foreground-muted">
                         {row.suitable}
